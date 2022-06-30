@@ -1,13 +1,72 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@100;400;700&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Poppins";
+  color: black;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  /* border: blue 1px solid; */
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 1em;
+  padding: 30px;
+  min-width: 600px;
+  text-align: center;
+}
+
+.password-options {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.password-options h2 {
+  border-bottom: 1px #333 solid;
+}
+
+.pass-option-container {
+  margin-top: 10px;
+  display: flex;
+}
+
+.pass-length {
+  display: flex;
+  flex-direction: column;
+}
+
+.pass-length-inputs { 
+  display: flex;
+}
+
+/* .pass-char-options input{
+  align-items:flex-start;
+} */
+
+.pass-char-options li {
+  list-style: none;
+  text-align: left;
+}
+
+.pass-char-options label {
+  margin-left: 5px;
+}
+
+/* .password-text-box {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+} */
