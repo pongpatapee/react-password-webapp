@@ -1,7 +1,6 @@
 import { useState } from "react";
-import generatePassword from "./utils/passwordUtil";
 
-const PasswordTextBox = ({ options }) => {
+const PasswordTextBox = ({ generatePassword, options }) => {
   const [password, setPassword] = useState("");
   const handleText = (e) => {
     setPassword(e.target.value);

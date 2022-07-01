@@ -3,8 +3,10 @@ import PasswordContent from "./PasswordContent";
 const Home = () => {
   return (
     <div className="home">
-      <h1>Password Generator</h1>
-      <PasswordContent />
+        <div className="home-conent">
+            <h1>Password Generator</h1>
+            <PasswordContent />
+        </div>
     </div>
   );
 };

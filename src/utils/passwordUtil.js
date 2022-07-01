@@ -28,5 +28,9 @@ function generatePassword(options) {
     return password;
 }
 
-export default generatePassword;
+function generateCutePassword() {
+    return "some cute random password"
+}
+
+export { generatePassword, generateCutePassword };
 

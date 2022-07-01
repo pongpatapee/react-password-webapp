@@ -20,7 +20,28 @@ body {
   align-items: center;
 }
 
-.content {
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  padding: 15px 40px;
+  border-bottom: 1px solid #b3b3b3;
+}
+
+.navbar .links {
+  margin-left: auto;
+}
+
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+  color:rgb(39, 128, 253);
+}
+
+.home {
   display: flex;
   justify-content: center;
   /* border: blue 1px solid; */

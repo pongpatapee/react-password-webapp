@@ -1,5 +1,6 @@
 import PasswordTextBox from "./PasswordTextBox";
 import PasswordOptions from "./PasswordOptions";
+import { generatePassword } from "./utils/passwordUtil";
 import { useState } from "react";
 
 const PasswordContent = () => {
@@ -13,7 +14,7 @@ const PasswordContent = () => {
 
   return (
     <div className="password-content">
-      <PasswordTextBox options={options} />
+      <PasswordTextBox generatePassword={generatePassword} options={options} />
       <PasswordOptions options={options} setOptions={setOptions} />
     </div>
   );

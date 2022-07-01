@@ -1,12 +1,21 @@
 import Home from "./Home";
+import Navbar from "./Navbar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import CutePasswordGenerator from "./CutePasswordGenerator";
 
 function App() {
   return (
-    <div className="App">
-      <div className="content">
-        <Home />
+    <BrowserRouter>
+      <div className="App">
+        <Navbar />
+        <div className="content">
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/CutePasswordGenerator" element={<CutePasswordGenerator />} />
+          </Routes>
+        </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 
