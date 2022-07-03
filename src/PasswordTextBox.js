@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PasswordStrengthBar from "react-password-strength-bar";
 
 const PasswordTextBox = ({ generatePassword, options }) => {
   const [password, setPassword] = useState("");
@@ -8,19 +9,31 @@ const PasswordTextBox = ({ generatePassword, options }) => {
 
   return (
     <div className="password-text-box">
-      <input type="text" id="passwordvalue" onChange={handleText} value={password} />
-      <button onClick={() => {
-        setPassword(generatePassword(options))
-
-      }}>Generate</button>
-
-      <button
-        onClick={() => {
-          navigator.clipboard.writeText(password);
-        }}
-      >
-        Copy
-      </button>
+      <div className="password-box-bar">
+        <input
+          type="text"
+          id="passwordvalue"
+          onChange={handleText}
+          value={password}
+        />
+        <PasswordStrengthBar password={password} />
+      </div>
+      <div className="password-buttons">
+        <button
+          onClick={() => {
+            setPassword(generatePassword(options));
+          }}
+        >
+          Generate
+        </button>
+        <button
+          onClick={() => {
+            navigator.clipboard.writeText(password);
+          }}
+        >
+          Copy
+        </button>
+      </div>
     </div>
   );
 };

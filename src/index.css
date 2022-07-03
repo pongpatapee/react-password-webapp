@@ -88,6 +88,7 @@ body {
   margin-left: 5px;
 }
 
-/* .password-text-box {
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-} */
+.password-text-box {
+  display: flex;
+  justify-content: space-around;
+}
